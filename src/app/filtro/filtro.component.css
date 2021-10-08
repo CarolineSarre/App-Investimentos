@@ -4,21 +4,56 @@
     width: 45%;
     margin-left: 15%;
     margin-top: 2%;
+    padding-left: 1%;
 }
+.busca{
+    display: flex;
+    width: auto;
+}
+
 input{
     border-top: none;
     border-left: none;
     border-right: none;
+    width: 60%;
 }
-button{
+a{
     background-image: url(icon_search.png);
     background-repeat: no-repeat;
     border: none;
     width: 10px;
     cursor: pointer;
     background-position: 0px 0px;
-    height: 20px;
+    height: 25px;
     padding-left: 20px;
-    margin: 5px;
+    margin: 10px;
     background-color: transparent;
+    
+}
+.slides-filtro{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.slider1, .slider2, .slider3{
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+.horario, .aviso{
+    color: gray;
+    font-size: small;
+    margin-bottom: -5%;
+
+}
+.slider-handle{
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    border-color: black;
+    border: 5px solid;
+}
+.slider{
+    background-color: cornflowerblue;
 }

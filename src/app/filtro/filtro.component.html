@@ -1,23 +1,33 @@
 <div class="filtro-top">
-    <form>
-        <div class="grid-container">
-          <div class="grid-x grid-padding-x">
-            <div class="medium-6 cell">
-              <label>
-                <input type="text" placeholder="Buscar fundo por nome">
-              </label>
-              <button type="submit"><img></button>
-            </div>
-          </div>
-        </div>
-      </form>
-      <div class="grid-x grid-margin-x">
-        <div class="cell small-10">
-          <div class="slider" data-slider data-initial-start="50">
-            <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput1">_</span>
+    <form class="busca">
+      
+        <input type="text" placeholder="Buscar fundo por nome">
+        <a class="button"></a>
+      
+    </form>
+      <div class="slides-filtro">
+        <div class="slider1">
+          <p>Aplicação Mínima</p>
+          <div class="slider" data-slider data-initial-start="50" data-end="200">
+            <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
             <span class="slider-fill" data-slider-fill></span>
+            <input type="hidden">
           </div>
+          <p class="aviso">Até R$20.000,00</p>
+        </div>
+        <div class="slider2">
+          <p>Perfil de risco do Fundo</p>
+        </div>
+        <div class="slider3">
+          <p>Prazo de resgate</p>
+          <div class="slider" data-slider data-initial-start="50" data-end="200">
+            <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+            <span class="slider-fill" data-slider-fill></span>
+            <input type="hidden">
+          </div>
+          <p class="aviso">Até 30 dias úteis</p>        
         </div>
       </div>
-      <p>Horário limite de aplicação 12:00</p>
+
+      <p class="horario">Horário limite de aplicação 12:00</p>
 </div>

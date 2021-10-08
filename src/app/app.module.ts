@@ -7,6 +7,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { FiltroComponent } from './filtro/filtro.component';
 import { InvestimentosComponent } from './investimentos/investimentos.component';
 import { FiltroLateralComponent } from './filtro-lateral/filtro-lateral.component';
+import { LegendaComponent } from './legenda/legenda.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FiltroLateralComponent } from './filtro-lateral/filtro-lateral.componen
     CabecalhoComponent,
     FiltroComponent,
     InvestimentosComponent,
-    FiltroLateralComponent
+    FiltroLateralComponent,
+    LegendaComponent
   ],
   imports: [
     BrowserModule,

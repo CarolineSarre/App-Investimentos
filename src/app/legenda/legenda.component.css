@@ -1,0 +1,50 @@
+.legendas{
+    background-color: white;
+    padding: 1%;
+    width: 15%;
+    height: max-content;
+    margin-left: 15%;
+    padding-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+h1{
+    font-size: 18pt;
+    font-weight: bold;
+}
+p{
+    font-size: 10pt;
+    margin-left: 15%;
+    
+}
+.qualificado{
+    background-image: url(./imagens/icon_green_star.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex;
+}
+.investidor{
+    background-image: url(./imagens/icon_check_circle.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex;
+}
+.resgate{
+    background-image: url(./imagens/icon_information_outline.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex;   
+}
+.fechado{
+    background-image: url(./imagens/icon_closed.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex; 
+}
+.aplicar{
+    background-image: url(./imagens/icon_up_arrow.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex;
+}
