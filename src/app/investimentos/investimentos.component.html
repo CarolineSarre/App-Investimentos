@@ -1,15 +1,37 @@
 <div class="investimento">
-    <p>investimentos</p>
-    <section>
+  <ul id ="lista">
+    <li class="topo">
+      <label>Fundo</label>
+      <p>Data da cota</p>
+      <p>Mês( % )</p>
+      <p>2016 ( % )</p>
+      <p>12M ( % )</p>
+      <p>Prazo do Resgate</p>
+      <p>Aplicar</p>
+    </li>
+  </ul>
+  
+  <h1 class="titulo">Renda Fixa</h1>
+  <h2 class="sub-titulo"> Indexado Soberano</h2>
+    <!-- <a class="button tiny" href="#" (click)="listarInvestimentos()">So Tiny</a> -->
+     <section>
       <div class="card"
-      *ngFor=" let investimento of listaInvestimentos">
-      <ul>
-        <li>
-          oi
-        </li>
-      </ul>
+        *ngFor=" let investimento of listaDeInvestimentos">
+        <ul>
+          <li>
+            <h4>nome</h4>
+            <p>descrição</p>
+            <p>07/10/2021</p>
+            <p>0,47</p>
+            <P>234</P>
+            <p>0,47</p>
+            <P>234</P>
+            <span>icone1</span>
+            <span class="aplicar"><P></P></span>
 
+          </li>
+        </ul>
       </div>
-    </section>
+    </section> 
           
 </div>

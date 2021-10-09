@@ -16,6 +16,7 @@ input{
     border-left: none;
     border-right: none;
     width: 60%;
+    box-shadow: none;
 }
 a{
     background-image: url(icon_search.png);

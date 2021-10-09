@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InvestimentosService } from './investimentos.service'
 
 @Component({
   selector: 'app-investimentos',
@@ -6,11 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./investimentos.component.css']
 })
 export class InvestimentosComponent implements OnInit {
-  listaInvestimentos: any[] = [];
-  constructor() { }
+  listaDeInvestimentos: any[] = [];
+  
+
+  constructor( 
+    public investimentoService: InvestimentosService
+  ) { }
 
   ngOnInit(): void {
-    this.listaInvestimentos = [1,2,3,4,5,6,7,8,9]
+    this.listarInvestimentos();
+   }
+
+  async listarInvestimentos(){
+    await this.investimentoService.getInvestimentos().subscribe(value => this.listaDeInvestimentos = value);
+    console.log(this.listaDeInvestimentos);
+    
   }
+  
 
 }
