@@ -8,6 +8,7 @@ import { InvestimentosService } from './investimentos.service'
 })
 export class InvestimentosComponent implements OnInit {
   listaDeInvestimentos: any[] = [];
+  listinha!: any;
   
 
   constructor( 
@@ -16,12 +17,12 @@ export class InvestimentosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarInvestimentos();
+    console.log("OnInit", this.listaDeInvestimentos)
    }
 
-  async listarInvestimentos(){
-    await this.investimentoService.getInvestimentos().subscribe(value => this.listaDeInvestimentos = value);
-    console.log(this.listaDeInvestimentos);
-    
+  listarInvestimentos(){
+   this.investimentoService.getInvestimentos().subscribe(value => this.listaDeInvestimentos = value);
+   console.log("OnInit", this.listaDeInvestimentos)
   }
   
 
