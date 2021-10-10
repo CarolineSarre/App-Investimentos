@@ -14,6 +14,6 @@ export class InvestimentosService {
   }
 
   getInvestimentos(){
-   return this.http.get<any>(`http://localhost:3000/investimentos`);
+   return this.http.get<any>(`${this.apiURL}/investimentos`);
   }
 }

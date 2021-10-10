@@ -1,37 +1,59 @@
 <div class="investimento">
-  <ul id ="lista">
-    <li class="topo">
-      <label>Fundo</label>
-      <p>Data da cota</p>
-      <p>Mês( % )</p>
-      <p>2016 ( % )</p>
-      <p>12M ( % )</p>
-      <p>Prazo do Resgate</p>
-      <p>Aplicar</p>
-    </li>
-  </ul>
-  
-  <h1 class="titulo">Renda Fixa</h1>
-  <h2 class="sub-titulo"> Indexado Soberano</h2>
-    <!-- <a class="button tiny" href="#" (click)="listarInvestimentos()">So Tiny</a> -->
-     <section>
-      <div class="card"
-        *ngFor=" let investimento of listaDeInvestimentos">
-        <ul>
-          <li>
-            <h4>nome</h4>
-            <p>descrição</p>
-            <p>07/10/2021</p>
-            <p>0,47</p>
-            <P>234</P>
-            <p>0,47</p>
-            <P>234</P>
-            <span>icone1</span>
-            <span class="aplicar"><P></P></span>
+  <div class="tabela" >
+  <table>
+    <thead>
+      <th>Fundo</th>
+      <th></th>
+      <th></th>
+      <th>Data da cota</th>
+      <th>Mês(%)</th>
+      <th>2016(%)</th>
+      <th>12M(%)</th>
+      <th>Aplicação miníma(R$)</th>
+      <th>Prazo do Resgate</th>
+      <th>Aplicar</th>
+    </thead>
+    <tbody>
+      <tr>Renda Fixa</tr>
+      <tr>Indexado Soberano</tr>
+      <tr *ngFor=" let investimento of listaDeInvestimentos">
+        <td class={{investimento.risco}}>
+          <H5>{{investimento.nome}}</H5>
+          <p>{{investimento.tipo}} | {{investimento.descricao}}</p>
+        </td>
+        <td>
+          <span
+            data-tooltip class="top" tabindex="2"
+            title="Fundo para investidor qualificado"
+            *ngIf="investimento.qualificado == true" class="qualificado">  
+            <p>----</p>
+          </span>
+        </td>
+        <td>
+          <span
+            title="Você já investe nesse fundo."
+            *ngIf="investimento.investidor == true" class="investidor"
+            ><p>----</p></span>
+        </td>
+        <td>{{investimento.data}}</td>
+        <td>{{investimento.mes}}</td>
+        <td>{{investimento.ano}}</td>
+        <td>{{investimento.M12}}</td>
+        <td>{{investimento.aplicacao}}</td>
+        <td>{{investimento.resgate}}</td>
+        <td>
+          <span
+            *ngIf="investimento.aplicar == true" class="aplicar">  
+            <p>----</p>
+          </span>
+          <span
+            *ngIf="investimento.aplicar == false" class="desativar">  
+            <p>----</p>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+   </table>
 
-          </li>
-        </ul>
-      </div>
-    </section> 
-          
+    </div>     
 </div>

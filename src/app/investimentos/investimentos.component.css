@@ -2,17 +2,15 @@
     height: max-content;
     background-color: white;
     padding: 3%;
-    width: 45%;
+    width: 50%;
     margin-left: 15%;
     margin-top: 2%;
-}
-.lista{
-    margin-left: -5%;
 }
 .topo{
     display:flex;
     justify-content: space-between;
-    font-weight: bold;
+    font-weight: bolder;
+    text-align: right;
 
 }
 label{
@@ -23,16 +21,37 @@ label{
 }
 p{
     float:right;
+    font-size: 9pt;
+    margin-left: 5% ;
+   
 }
-.card{
+.listinha{
+    display:flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    text-align: right;
+    border-left: 5px solid red;
+}
+.inves-list{
+    width: 114%;
+    margin-left: -14%;
+    padding-left: 5%;
+    padding-top: 2%;
+    height: 50px;
+
+}
+h5{
+    font-size: 12pt;
+}
+/* .card{
     height: max-content;
     margin: 0px;
     display:flex;
     justify-content: space-between;
-}
+} */
 .titulo, .sub-titulo{
-    width: 116%;
-    margin-left: -8%;
+    width: 114%;
+    margin-left: -7%;
     padding-left: 5%;
     padding-top: 2%;
     height: 50px;
@@ -59,4 +78,47 @@ h2{
     height: 15%;
     display: flex;
     width: 25px;
+    color: transparent;
 }
+.desativar{
+    background-image: url(./icon_closed.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex;
+    width: 25px;
+    color: transparent;
+}
+.qualificado{
+    background-image: url(./icon_green_star.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex;
+    width: 25px;
+    color: transparent;
+}
+.investidor{
+    background-image: url(./icon_check_circle.png);
+    background-repeat: no-repeat;
+    height: 15%;
+    display: flex;
+    width: 25px;
+    color: transparent;
+
+}
+
+
+  .medio{
+    border-left: 3px solid #FEDC01;
+  }
+  .medioalto {
+    border-left: 3px solid #FF8303;  
+  }
+  .alto{
+    border-left: 3px solid #fe0300;  
+  }
+  .zero{
+    border-left: 3px solid #A6EAFF;  
+  }
+  .baixo{
+    border-left: 3px solid #6DEEDC;  
+  }
