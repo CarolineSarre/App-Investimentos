@@ -3,7 +3,7 @@
     height: 45%;
     padding: 5%;
     background-image:linear-gradient(
-        rgba(24,61,90,0.7),rgba(24,61,90,0.7)
+        rgba(79, 129, 138,0.7),rgba(79, 129, 138,0.7)
       ), url(./bg.png);
     background-size: cover;
 }

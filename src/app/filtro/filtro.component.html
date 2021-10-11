@@ -1,4 +1,6 @@
-<div class="filtro-top">
+<div class="grid-container">
+  <div class="grid-x grid-margin-x">
+    <div class="filtro-top">
     <form class="busca">
       
         <input type="text" placeholder="Buscar fundo por nome">
@@ -8,15 +10,26 @@
       <div class="slides-filtro">
         <div class="slider1">
           <p>Aplicação Mínima</p>
-          <div class="slider" data-slider data-initial-start="50" data-end="200">
-            <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
-            <span class="slider-fill" data-slider-fill></span>
-            <input type="hidden">
+          <div class="grid-x grid-margin-x">
+            <div class="cell small-10">
+              <div class="slider" data-slider data-initial-start="0" data-step="8">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
+                <span class="slider-fill" data-slider-fill></span>
+              </div>
+            </div>
+            <div class="cell small-2">
+              <input type="number" id="sliderOutput2">
+            </div>
           </div>
           <p class="aviso">Até R$20.000,00</p>
         </div>
         <div class="slider2">
           <p>Perfil de risco do Fundo</p>
+          <div class="cell small-4 legenda flex-container"><i
+            class="material-icons md-12 icon-red padding-right-1">&#xe895;</i>
+            <i class="material-icons md-12 icon-blue padding-right-1">&#xe895;</i>
+          <span class="flex-dir-row align-self-middle">Aplicar neste fundo</span></div>
+      
         </div>
         <div class="slider3">
           <p>Prazo de resgate</p>
@@ -31,3 +44,4 @@
 
       <p class="horario">Horário limite de aplicação 12:00</p>
 </div>
+</div></div>
