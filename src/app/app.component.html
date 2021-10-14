@@ -1,7 +1,18 @@
 <div class="app">
+    
     <app-cabecalho></app-cabecalho>
-    <app-filtro></app-filtro>
-    <app-filtro-lateral></app-filtro-lateral>
-    <app-investimentos></app-investimentos>
-    <app-legenda></app-legenda>
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-9">
+                <app-filtro [textoBuscafiltro]="textoBusca" (sendToParent)="changeTextoBusca($event)"></app-filtro>
+                <app-investimentos [textBuscaInvestimentos]="textoBusca"></app-investimentos>
+                <div class="cell small-3">
+                    <app-legenda></app-legenda>
+                </div>
+            </div>
+            <div class="cell small-3">
+                <app-filtro-lateral></app-filtro-lateral>
+            </div>
+        </div>
+    </div>
 </div>

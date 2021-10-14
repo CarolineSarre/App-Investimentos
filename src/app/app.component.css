@@ -2,12 +2,15 @@ app-filtro-lateral{
     width: auto;
     float: right;
     background-color: white;
-    padding: 2%;
-    height: 40%;
-    margin-top: -18%;
+    box-sizing: border-box;
+    margin-top: 6%;
 }
 .app{
     background-color: whitesmoke;
     height: 100%;
     width: 100%;
+}
+
+* {
+    font-size: 12px;
 }

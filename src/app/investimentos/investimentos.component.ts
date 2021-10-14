@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { InvestimentosService } from './investimentos.service'
 
 @Component({
@@ -9,8 +9,7 @@ import { InvestimentosService } from './investimentos.service'
 export class InvestimentosComponent implements OnInit {
   listaDeInvestimentos: any[] = [];
   listinha!: any;
-  
-
+  @Input() textBuscaInvestimentos;
   constructor( 
     public investimentoService: InvestimentosService
   ) { }
@@ -23,6 +22,7 @@ export class InvestimentosComponent implements OnInit {
   listarInvestimentos(){
    this.investimentoService.getInvestimentos().subscribe(value => this.listaDeInvestimentos = value);
    console.log("OnInit", this.listaDeInvestimentos)
+  
   }
   
 

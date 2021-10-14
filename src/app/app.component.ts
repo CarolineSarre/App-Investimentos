@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import * as $ from 'jquery';
 import 'foundation-sites';
 
@@ -7,12 +7,17 @@ import 'foundation-sites';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent{
   title = 'investimentos';
+  textoBusca = 'XABLAU'
   ngOnInit() {
     $(document).ready(function () {
       $(document).foundation();
     });
+  }
+
+  changeTextoBusca(value: any) {
+    this.textoBusca = value
   }
   constructor(){}
 }

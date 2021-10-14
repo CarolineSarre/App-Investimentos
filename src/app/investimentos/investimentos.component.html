@@ -1,84 +1,114 @@
-<div class="grid-container">
-  <div class="grid-x grid-margin-x">
-    <div class="investimento">
-      <div class="tabela" >
-      <table class="grid-x grid-margin-x" >
-        <thead >
-          <th>Fundo</th>
-          <th></th>
-          <th></th>
-          <th>Data da cota</th>
-          <th>Mês(%)</th>
-          <th>2016(%)</th>
-          <th>12M(%)</th>
-          <th>Aplicação miníma(R$)</th>
-          <th>Prazo do Resgate</th>
-          <th>Aplicar</th>
-        </thead>
-        <tbody>
-          <tr> <h2>Renda Fixa</h2></tr>
-          <tr>Indexado Soberano</tr>
-          <tr *ngFor=" let investimento of listaDeInvestimentos" >
-            <td id={{investimento.risco}} class="accordion" [attr.data-toggle]="'id' + investimento.id">
-              <h5>
-                <div class="dropdown-pane" [attr.id]="'id' + investimento.id" data-dropdown data-auto-focus="true">
-                  <div class="grid-container">
-                    <p>Cotização da aplicação: D+0</p>
-                    <p>Cotização do resgate: {{investimento.resgate}}(dias corridos)</p>
-                    <p>Liquidação do resgate: D+2(dias uteis)</p>
-                    <p>Taxa de administração:3%</p>
-                    <p>Conheça mais informações sobre esse fundo</p>
-                    <p>CNPJ DO FUNDO: {{investimento.cnpj}}</p>
-                  </div>
-              </div>{{investimento.nome}}
-              </h5>
-              <p>{{investimento.tipo}} | {{investimento.descricao}}</p>
-            </td>
-            <td>
-              <span
-                data-tooltip class="top" tabindex="2"
-                title="Fundo para investidor qualificado"
-                *ngIf="investimento.qualificado == true" class="qualificado">  
-                <p>----</p>
-              </span>
-            </td>
-            <td>
-              <span
-              data-tooltip class="top" tabindex="2"
-                title="Você já investe nesse fundo."
-                *ngIf="investimento.investidor == true" class="investidor"
-                ><p>----</p></span>
-            </td>
-            <td>{{investimento.data}}</td>
-            <td>{{investimento.mes}}</td>
-            <td>{{investimento.ano}}</td>
-            <td>{{investimento.M12}}</td>
-            <td>{{investimento.aplicacao}}</td>
-            <td id="resgate"
-            data-tooltip class="top" tabindex="2"
-            title="Dias para a conversão do resgate: 3º dia útil anterior ao último dia útil do 2º mês calendário subsequente á solicitação de resgate"
-            >
-              <span>{{investimento.resgate}}</span>
-              <img src="assets/icon_information_outline.png" alt="" srcset="">
+<div class="investimento">
+  <div class="tabela">
+    <table>
+      <thead>
+        <th>Fundo</th>
+        <th></th>
+        <th></th>
+        <th>Data da cota</th>
+        <th>Mês(%)</th>
+        <th>2016(%)</th>
+        <th>12M(%)</th>
+        <th>Aplicação miníma(R$)</th>
+        <th>Prazo do Resgate</th>
+        <th>Aplicar</th>
+      </thead>
+      <tbody>
+        <tr class="greyRow">
+          <td>
+            <h2>Renda Fixa</h2>
           </td>
-            <td>
-              <span data-tooltip class="top" tabindex="2"
-              title="clique para aplicar nesse fundo"
-                *ngIf="investimento.aplicar == true" class="aplicar">  
-                <p>----</p>
-              </span>
-              <span
-              data-tooltip class="top" tabindex="2"
-                title="Fundo não disponível para aplicação."
-                *ngIf="investimento.aplicar == false" class="desativar">  
-                <p>----</p>
-              </span>
-            </td>
-          </tr>     
-        </tbody>
-      </table>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="whiteRow">
+          <td>
+            <h2>Indexado Soberano</h2>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr *ngFor=" let investimento of listaDeInvestimentos">
+          <td id={{investimento.risco}} class="accordion" [attr.data-toggle]="'id' + investimento.id">
+            <h5>
+              <div class="dropdown-pane" [attr.id]="'id' + investimento.id" data-dropdown data-auto-focus="true">
+                <div class="grid-container">
+                  <p>Cotização da aplicação: D+0</p>
+                  <p>Cotização do resgate: {{ investimento.resgate }}(dias corridos)</p>
+                  <p>Liquidação do resgate: D+2(dias uteis)</p>
+                  <p>Taxa de administração:3%</p>
+                  <p>Conheça mais informações sobre esse fundo</p>
+                  <p>CNPJ DO FUNDO: {{ investimento.cnpj }}</p>
+                </div>
+              </div>{{ investimento.nome }}
+            </h5>
+            <p>{{ investimento.tipo }} | {{ investimento.descricao }}</p>
+          </td>
+          <td>
+            <span data-tooltip class="top" tabindex="2" title="Fundo para investidor qualificado"
+              *ngIf="investimento.qualificado == true" class="qualificado">
+              <p>----</p>
+            </span>
+          </td>
+          <td>
+            <span
+              data-tooltip
+              data-position="top"
+              data-alignment="center"
+              class="top"
+              tabindex="2"
+              title="Você já investe nesse fundo."
+              *ngIf="investimento.investidor == true" class="investidor"
+            >
+              <p>----</p>
+            </span>
+          </td>
+          <td>{{ investimento.data }}</td>
+          <td>{{ investimento.mes }}</td>
+          <td>{{ investimento.ano }}</td>
+          <td>{{ investimento.M12 }}</td>
+          <td>{{ investimento.aplicacao }}</td>
+          <td
+            id="resgate"
+            
+          >
+            <span>{{investimento.resgate}}</span>
+            <img 
+              src="assets/icon_information_outline.png"
+              data-tooltip
+              class="top"
+              tabindex="2"
+              data-position="bottom" data-alignment="right" 
+              title="Dias para a conversão do resgate: 3º dia útil anterior ao último dia útil do 2º mês calendário subsequente á solicitação de resgate"
+            >
+          </td>
+          <td>
+            <span data-tooltip class="top" tabindex="2" title="clique para aplicar nesse fundo"
+              *ngIf="investimento.aplicar == true" class="aplicar">
+              <p>----</p>
+            </span>
+            <span data-tooltip class="top" tabindex="2" title="Fundo não disponível para aplicação."
+              *ngIf="investimento.aplicar == false" class="desativar">
+              <p>----</p>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-        </div>     
-    </div>
   </div>
 </div>
