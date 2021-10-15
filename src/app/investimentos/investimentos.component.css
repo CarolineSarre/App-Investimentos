@@ -116,18 +116,7 @@ h2{
     border-left: 8px solid #FEDC01;
     height: max-content;
   }
-  #medioalto {
-    border-left: 8px solid #FF8303;  
-  }
-  #alto{
-    border-left: 8px solid #fe0300;  
-  }
-  #zero{
-    border-left: 8px solid #A6EAFF;  
-  }
-  #baixo{
-    border-left: 8px solid #6DEEDC;  
-  }
+
   tbody tr:nth-child(even){
       background-color: white;
       width: 100%;
@@ -152,3 +141,54 @@ h2{
 thead {
     background-color: #FFFFFF;
 }
+.risco-1 {
+    border-left: 5px solid #bcebfb;
+  
+  }
+  
+  .risco-2 {
+    border-left:5px solid #9ef1dd;
+  }
+  
+  .risco-3 {
+    border-left:5px solid #b0ec76;
+  }
+  
+  .risco-4 {
+    border-left: 5px solid #c5f447;
+  }
+  
+  .risco-5 {
+    border-left:5px solid #e3f43b;
+  }
+  
+  .risco-6 {
+    border-left:5px solid #f7f03b;
+  }
+  
+  .risco-7 {
+    
+    border-left:5px solid #f5db33;
+  }
+  
+  .risco-8 {
+   
+    border-left:5px solid #eeba2b;
+  }
+  
+  .risco-9 {
+    border-left:5px solid #e48720;
+  }
+  
+  .risco-10 {
+    border-left:5px solid #df5e16;
+  }
+  
+  .risco-11 {
+    
+    border-left:5px solid #db0e00;
+  }
+  
+  .risco-12 {
+    border-left:5px solid #9b1b1b;
+  }

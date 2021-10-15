@@ -9,7 +9,8 @@ import { InvestimentosComponent } from './investimentos/investimentos.component'
 import { FiltroLateralComponent } from './filtro-lateral/filtro-lateral.component';
 import { LegendaComponent } from './legenda/legenda.component';
 import { InvestimentosService } from './investimentos/investimentos.service';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     InvestimentosService

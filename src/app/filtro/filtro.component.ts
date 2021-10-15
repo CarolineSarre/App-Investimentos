@@ -10,15 +10,15 @@ import { InvestimentosService } from '../investimentos/investimentos.service';
 })
 export class FiltroComponent implements OnChanges {
 
-  queryField = new FormControl();
   @Input() textoBuscafiltro ;
-  @Output() childToParent = new EventEmitter<any>();
-
-  
+  @Output() busca = new EventEmitter<any>();
+  @Output() textoBuscado!: string;
+  listaDeFundos!: any;
 
   constructor( private investimentosService: InvestimentosService) { }
 
   ngOnInit(): void {
+    this.buscaLista();
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -26,22 +26,22 @@ export class FiltroComponent implements OnChanges {
   }
 
   sendToParent(value: any){
-    this.childToParent.emit((<HTMLInputElement>value.target).value);
+    this.busca.emit(this.textoBuscado);
+    console.log(this.textoBuscado);
   }
   
-  pesquisar(){
-    let value = this.queryField.valueChanges;
-
-    // if(value && ( value = value.trim()) != ''){
-    //   const find = (items, text) => {
-    //     text = text.split(' ');
-    //     return items.filter(function (item) {
-    //       return text.every(function (el) {
-    //         return item.nome.indexOf(el) > -1;
-    //       });
-    //     })
-    //   }
-    // }    
+  buscaLista(){
+    this.investimentosService.getInvestimentos().subscribe(value => this.listaDeFundos = value);
+    
+    
+  }
+  filtraLista(){
+    const listaFiltrada = this.listaDeFundos.filter((item)=>{
+      return item.simple_name;
+      
+    })
+    this.listaDeFundos = listaFiltrada;
+    console.log(listaFiltrada)
   }
 
 }

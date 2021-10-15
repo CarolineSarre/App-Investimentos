@@ -4,8 +4,15 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell small-9">
-                <app-filtro [textoBuscafiltro]="textoBusca" (sendToParent)="changeTextoBusca($event)"></app-filtro>
-                <app-investimentos [textBuscaInvestimentos]="textoBusca"></app-investimentos>
+                <app-filtro
+                    [textoBuscafiltro]="textoBusca" 
+                    (busca)="changeTextoBusca($event)" >
+                </app-filtro>
+                <app-investimentos 
+                    [textBuscaInvestimentos]="textoBusca"
+                    (busca)="changeTextoBusca($event)"
+                    (listaFiltrada)="filtro()">
+                </app-investimentos>
                 <div class="cell small-3">
                     <app-legenda></app-legenda>
                 </div>

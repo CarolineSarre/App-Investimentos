@@ -5,10 +5,11 @@
       
         <input 
           type="text" 
-          placeholder="{{textoBuscafiltro}}"
-          (keyup)="sendToParent($event)"
+          placeholder="Buscar fundo por nome"
+          [(ngModel)]="textoBuscado"
+          name="xablau"
           />
-        <a class="button" (click) = "pesquisar()"></a>
+        <a class="button" (click)="filtraLista()"></a>
       
     </form>
       <div class="slides-filtro">
@@ -18,7 +19,6 @@
                 <span class="slider-handle"  data-slider-handle role="slider" tabindex="1" aria-controls="sliderOutput2"></span>
                 <span class="slider-fill" data-slider-fill></span>
               </div>
-              <input type="number" id="sliderOutput2">
           <p class="aviso">Até R$20.000,00</p>
         </div>
         <div class="slider2">

@@ -13,11 +13,10 @@ export class InvestimentosService {
   constructor(
     private http: HttpClient,
   ) { 
-    this.apiURL = 'http://localhost:3000';
   }
 
   getInvestimentos(){
-   return this.http.get<any>(`${this.apiURL}/investimentos`);
+   return this.http.get<any>(`https://s3.amazonaws.com/orama-media/json/fund_detail_full.json?limit=1000&offset=0&serializer=fund_detail_full`);
   }
 
 
